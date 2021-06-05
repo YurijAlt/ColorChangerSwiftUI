@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var redSliderValue = 200.0
-    @State private var greenSliderValue = 250.0
-    @State private var blueSliderValue = 300.0
+    @State private var redSliderValue = Double.random(in: 0...255)
+    @State private var greenSliderValue = Double.random(in: 0...255)
+    @State private var blueSliderValue = Double.random(in: 0...255)
     
     @State private var redColorTextField = ""
     @State private var greenColorTextField = ""
@@ -22,11 +22,11 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 Window(color: Color(
-                        red: redSliderValue / 255,
-                        green: greenSliderValue / 255,
-                        blue: blueSliderValue / 255
+                    red: redSliderValue / 255,
+                    green: greenSliderValue / 255,
+                    blue: blueSliderValue / 255
                 ))
-                    
+                
                 ColorTuner(value: $redSliderValue, textFieldValue: $redColorTextField)
                 ColorTuner(value: $greenSliderValue, textFieldValue: $greenColorTextField)
                 ColorTuner(value: $blueSliderValue, textFieldValue: $blueColorTextField)
@@ -53,10 +53,11 @@ struct ColorTuner: View {
             Text("\(lround(value))")
                 .foregroundColor(.white)
             Slider(value: $value, in: 0...255, step: 1)
-            
-            TextField("200", text: $textFieldValue)
-                .frame(width: 40)
+            TextField("", value: $value, formatter: NumberFormatter())
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 50)
         }
         .padding()
+        
     }
 }

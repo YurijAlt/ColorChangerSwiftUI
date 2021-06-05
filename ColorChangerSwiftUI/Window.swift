@@ -13,12 +13,12 @@ struct Window: View {
     
     var body: some View {
         Rectangle()
-            .frame(width: 320, height: 120)
+            .frame(width: 320, height: 140)
             .cornerRadius(20)
             .foregroundColor(color)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.white, lineWidth: 3)
+                    .stroke(Color.white, lineWidth: 2)
             )
             .shadow(color: color, radius: 10)
     }
