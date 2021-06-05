@@ -12,10 +12,6 @@ struct ContentView: View {
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
     
-    @State private var redColorTextField = ""
-    @State private var greenColorTextField = ""
-    @State private var blueColorTextField = ""
-    
     var body: some View {
         ZStack {
             Color(.orange)
@@ -27,9 +23,9 @@ struct ContentView: View {
                     blue: blueSliderValue / 255
                 ))
                 
-                ColorTuner(value: $redSliderValue, textFieldValue: $redColorTextField)
-                ColorTuner(value: $greenSliderValue, textFieldValue: $greenColorTextField)
-                ColorTuner(value: $blueSliderValue, textFieldValue: $blueColorTextField)
+                ColorTuner(value: $redSliderValue)
+                ColorTuner(value: $greenSliderValue)
+                ColorTuner(value: $blueSliderValue)
                 
                 Spacer()
             }
@@ -46,7 +42,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ColorTuner: View {
     @Binding var value: Double
-    @Binding var textFieldValue: String
     
     var body: some View {
         HStack {
