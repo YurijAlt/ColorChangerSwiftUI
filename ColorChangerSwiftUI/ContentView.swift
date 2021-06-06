@@ -50,7 +50,6 @@ struct ColorTuner: View {
     var body: some View {
         HStack {
             Text("\(lround(value))")
-                
                 .foregroundColor(.white)
                 .bold()
                 .frame(width: 46)
