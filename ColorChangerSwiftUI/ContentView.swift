@@ -12,9 +12,11 @@ struct ContentView: View {
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
     
+    
+    
     var body: some View {
         ZStack {
-            Color(.orange)
+            Color(#colorLiteral(red: 1, green: 0.696955204, blue: 0.9159916043, alpha: 1))
                 .ignoresSafeArea()
             VStack {
                 Window(color: Color(
@@ -22,15 +24,22 @@ struct ContentView: View {
                     green: greenSliderValue / 255,
                     blue: blueSliderValue / 255
                 ))
+                .padding()
                 
                 ColorTuner(value: $redSliderValue)
                 ColorTuner(value: $greenSliderValue)
                 ColorTuner(value: $blueSliderValue)
                 
                 Spacer()
+                
             }
         }
     }
+    
+    private func checkNumber() {
+        
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -46,11 +55,12 @@ struct ColorTuner: View {
     var body: some View {
         HStack {
             Text("\(lround(value))")
-                .foregroundColor(.white)
+                .bold()
+                .frame(width: 46)
             Slider(value: $value, in: 0...255, step: 1)
-            TextField("", value: $value, formatter: NumberFormatter())
+            TextField("Color", value: $value, formatter: NumberFormatter(), onEditingChanged: {_ in }, onCommit: {})
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(width: 50)
+                .frame(width: 46)
         }
         .padding()
         
