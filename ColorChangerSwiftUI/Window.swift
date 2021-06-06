@@ -18,9 +18,9 @@ struct Window: View {
             .foregroundColor(color)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.white, lineWidth: 2)
+                    .stroke(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), lineWidth: 1)
             )
-            .shadow(color: color, radius: 10)
+            .shadow(color: color, radius: 30)
     }
 }
 
