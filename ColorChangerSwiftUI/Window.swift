@@ -9,29 +9,27 @@ import SwiftUI
 
 struct Window: View {
     
-    let color: Color
+    let red: Double
+    let green: Double
+    let blue: Double
     
     var body: some View {
-        Rectangle()
-            .frame(width: 320, height: 140)
+        Color(red: red / 255, green: green / 255, blue: blue / 255)
             .cornerRadius(20)
-            .foregroundColor(color)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), lineWidth: 1)
+                    .stroke(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), lineWidth: 4)
             )
-            .shadow(color: color, radius: 30)
+            .frame(height: 140)
+            .shadow(
+                color: Color(red: red / 255, green: green / 255, blue: blue / 255),
+                radius: 30
+            )
     }
 }
 
 struct Window_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color(.black)
-                .ignoresSafeArea()
-            Window(color: .pink)
-                
-        }
-        
+        Window(red: 163, green: 87, blue: 215)
     }
 }

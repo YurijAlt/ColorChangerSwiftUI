@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42F949E2671465B00F48BA5 /* SliderValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F949D2671465B00F48BA5 /* SliderValueLabel.swift */; };
+		C46221E726714866008026E7 /* SliderValueTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46221E626714866008026E7 /* SliderValueTF.swift */; };
+		C46221E926714C6D008026E7 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46221E826714C6D008026E7 /* ColorSlider.swift */; };
 		C4BCFAF7266ABBCB008729BA /* ColorChangerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCFAF6266ABBCB008729BA /* ColorChangerSwiftUIApp.swift */; };
 		C4BCFAF9266ABBCB008729BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCFAF8266ABBCB008729BA /* ContentView.swift */; };
 		C4BCFAFB266ABBCD008729BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BCFAFA266ABBCD008729BA /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42F949D2671465B00F48BA5 /* SliderValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderValueLabel.swift; sourceTree = "<group>"; };
+		C46221E626714866008026E7 /* SliderValueTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderValueTF.swift; sourceTree = "<group>"; };
+		C46221E826714C6D008026E7 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		C4BCFAF3266ABBCB008729BA /* ColorChangerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorChangerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BCFAF6266ABBCB008729BA /* ColorChangerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangerSwiftUIApp.swift; sourceTree = "<group>"; };
 		C4BCFAF8266ABBCB008729BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,9 @@
 				C4BCFAF6266ABBCB008729BA /* ColorChangerSwiftUIApp.swift */,
 				C4BCFAF8266ABBCB008729BA /* ContentView.swift */,
 				C4BCFB05266ABFB0008729BA /* Window.swift */,
+				C42F949D2671465B00F48BA5 /* SliderValueLabel.swift */,
+				C46221E626714866008026E7 /* SliderValueTF.swift */,
+				C46221E826714C6D008026E7 /* ColorSlider.swift */,
 				C4BCFAFA266ABBCD008729BA /* Assets.xcassets */,
 				C4BCFAFF266ABBCD008729BA /* Info.plist */,
 				C4BCFAFC266ABBCD008729BA /* Preview Content */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46221E726714866008026E7 /* SliderValueTF.swift in Sources */,
 				C4BCFAF9266ABBCB008729BA /* ContentView.swift in Sources */,
+				C42F949E2671465B00F48BA5 /* SliderValueLabel.swift in Sources */,
 				C4BCFAF7266ABBCB008729BA /* ColorChangerSwiftUIApp.swift in Sources */,
+				C46221E926714C6D008026E7 /* ColorSlider.swift in Sources */,
 				C4BCFB06266ABFB0008729BA /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
